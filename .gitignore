@@ -1,0 +1,15 @@
+#Python
+*.pyc
+
+#Virtualenv
+/bin
+/include
+/build
+/lib
+/lib64
+/src
+/share
+/man
+.Python
+
+
