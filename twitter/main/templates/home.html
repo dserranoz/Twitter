@@ -7,7 +7,7 @@
 <style type="text/css">
 #header{
 	width: 1349px;
-	height: 40px;
+	height: 50px;
 	background-color: #252525;
 }
 .content{
@@ -24,20 +24,30 @@
 .img1{
 	background: url({{ STATIC_URL }}nocturno.png) no-repeat;
 }
+.inciarsesion{
+	background-image: url({{ STATIC_URL }}iniciar.png) no-repeat;
+	width: 106px;
+	height: ;
+}
 </style>
 </head>
 <body>
-	<table border="0" align="center" width="800" class="content">
+	<table border="1" align="center" width="800" class="content">
 
 	<div id="header" class="logo"></div>
 		<tr> </tr> 
 		<tr> 
-		<td> </td> 
-		<td class="img1">
-		
-		 </td> 
-		<td> </td> 
-		<td> </td> 
+			<td width="230" height="330"> </td> 
+			<td width="500" class="img1"></td> 
+			<td width="302"> 
+<table border="1" >
+<tr> <td width="302" height="109"> 
+<input type='image' name='boton' value='' style='width:106px; height:30px; background-image: url({{ STATIC_URL }}iniciar.png); no-repeat;'>
+</td> </tr> 
+<tr> <td width="302" height="207"> </td> </tr> 
+</table>
+			</td> 
+			<td> </td> 
 		</tr> 
 		<tr> </tr> 
     </table>
