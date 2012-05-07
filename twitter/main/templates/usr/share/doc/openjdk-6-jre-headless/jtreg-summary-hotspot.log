@@ -1,0 +1,68 @@
+--------------- jtreg console summary for hotspot ---------------
+Test results: passed: 100
+--------------- jtreg console summary for langtools ---------------
+Error:  tools/javac/processing/6499119/ClassProcessor.java
+Test results: passed: 1,378; error: 1
+--------------- jtreg console summary for jdk ---------------
+FAILED: java/awt/Focus/ActualFocusedWindowTest/ActualFocusedWindowRetaining.java
+FAILED: java/awt/FontClass/CreateFont/DeleteFont.sh
+FAILED: java/awt/Frame/DynamicLayout/DynamicLayout.java
+FAILED: java/awt/Frame/MaximizedToIconified/MaximizedToIconified.java
+FAILED: java/awt/FullScreen/BufferStrategyExceptionTest/BufferStrategyExceptionTest.java
+FAILED: java/awt/FullScreen/NoResizeEventOnDMChangeTest/NoResizeEventOnDMChangeTest.java
+FAILED: java/awt/FullScreen/SetFSWindow/FSFrame.java
+Error:  java/awt/FullScreen/UninitializedDisplayModeChangeTest/UninitializedDisplayModeChangeTest.java
+FAILED: java/awt/Graphics2D/DrawString/RotTransText.java
+FAILED: java/awt/Insets/WindowWithWarningTest/WindowWithWarningTest.html
+FAILED: java/awt/print/PrinterJob/ExceptionTest.java
+FAILED: java/beans/XMLEncoder/javax_swing_tree_TreePath.java
+Error:  java/lang/management/MemoryMXBean/CollectionUsageThresholdConcMarkSweepGC.sh
+FAILED: java/net/Socket/Bindv6Only.java
+FAILED: java/net/URL/TestHttps.java
+FAILED: java/nio/channels/DatagramChannel/IsBound.java
+FAILED: java/nio/channels/DatagramChannel/IsConnected.java
+FAILED: java/nio/channels/Selector/Alias.java
+FAILED: java/nio/channels/Selector/BasicConnect.java
+FAILED: java/nio/channels/Selector/Connect.java
+FAILED: java/nio/channels/Selector/ConnectWrite.java
+FAILED: java/nio/channels/Selector/KeysReady.java
+FAILED: java/nio/channels/Selector/OpRead.java
+FAILED: java/nio/channels/SocketChannel/AdaptSocket.java
+FAILED: java/nio/channels/SocketChannel/Basic.java
+FAILED: java/nio/channels/SocketChannel/BufferSize.java
+FAILED: java/nio/channels/SocketChannel/Connect.java
+FAILED: java/nio/channels/SocketChannel/ConnectState.java
+FAILED: java/nio/channels/SocketChannel/FinishConnect.java
+FAILED: java/nio/channels/SocketChannel/IsConnectable.java
+FAILED: java/nio/channels/SocketChannel/LocalAddress.java
+FAILED: java/nio/channels/SocketChannel/Shutdown.java
+FAILED: java/nio/channels/SocketChannel/Stream.java
+FAILED: java/nio/channels/SocketChannel/VectorParams.java
+FAILED: java/nio/charset/Charset/NIOCharsetAvailabilityTest.java
+FAILED: java/security/KeyPairGenerator/Failover.java
+FAILED: javax/swing/plaf/synth/Test6933784.java
+FAILED: sun/java2d/cmm/ColorConvertOp/ColConvCCMTest.java
+FAILED: sun/java2d/cmm/ColorConvertOp/ColConvDCMTest.java
+FAILED: sun/java2d/cmm/ColorConvertOp/MTColConvTest.java
+FAILED: sun/nio/cs/Test4200310.sh
+FAILED: sun/nio/cs/TestSJIS0213.java
+FAILED: sun/security/krb5/auto/IgnoreChannelBinding.java
+FAILED: sun/security/pkcs11/ec/ReadCertificates.java
+FAILED: sun/security/pkcs11/ec/ReadPKCS12.java
+FAILED: sun/security/pkcs11/ec/TestCurves.java
+FAILED: sun/security/pkcs11/ec/TestECDH.java
+FAILED: sun/security/pkcs11/ec/TestECDSA.java
+FAILED: sun/security/pkcs11/ec/TestECGenSpec.java
+FAILED: sun/security/pkcs11/ec/TestKeyFactory.java
+FAILED: sun/security/pkcs11/sslecc/ClientJSSEServerJSSE.java
+FAILED: sun/security/pkcs11/tls/TestPRF.java
+FAILED: sun/security/ssl/javax/net/ssl/NewAPIs/SSLEngine/TestAllSuites.java
+FAILED: sun/security/ssl/sanity/ciphersuites/CheckCipherSuites.java
+FAILED: sun/security/ssl/sanity/interop/ClientJSSEServerJSSE.java
+FAILED: sun/security/ssl/sun/net/www/protocol/https/HttpsURLConnection/DNSIdentities.java
+FAILED: sun/security/ssl/sun/net/www/protocol/https/HttpsURLConnection/Identities.java
+FAILED: sun/security/ssl/sun/net/www/protocol/https/HttpsURLConnection/IPAddressIPIdentities.java
+FAILED: sun/security/ssl/sun/net/www/protocol/https/HttpsURLConnection/IPIdentities.java
+FAILED: sun/security/validator/CertReplace.java
+FAILED: sun/tools/jstatd/jstatdExternalRegistry.sh
+Test results: passed: 3,280; failed: 59; error: 2

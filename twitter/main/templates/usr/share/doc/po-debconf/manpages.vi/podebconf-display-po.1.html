@@ -1,0 +1,126 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TÊN</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+
+<!-- INDEX BEGIN -->
+<div name="index">
+<p><a name="__index__"></a></p>
+<!--
+
+<ul>
+
+	<li><a href="#t__n">TÊN</a></li>
+	<li><a href="#t__m_t___t">TÓM TẮT</a></li>
+	<li><a href="#m___t___">MÔ TẢ</a></li>
+	<li><a href="#t__y_ch___n">TÙY CHỌN</a></li>
+	<li><a href="#c___n_th___n">CẨN THẬN</a></li>
+	<li><a href="#xem_c__ng">XEM CŨNG</a></li>
+	<li><a href="#t__c_gi___">TÁC GIẢ</a></li>
+</ul>
+
+-->
+
+
+</div>
+<!-- INDEX END -->
+
+<p>
+</p>
+<hr />
+<h1><a name="t__n">TÊN</a></h1>
+<p>podebconf-display-po — hiển thị nội dung của tập tin PO trên giao diện
+debconf</p>
+<p>
+</p>
+<hr />
+<h1><a name="t__m_t___t">TÓM TẮT</a></h1>
+<p><strong>podebconf-display-po</strong> [<strong>-h</strong>] [<strong>-f</strong> <em>GIAO_DIỆN</em>] <em>tập_tin.po</em></p>
+<p>
+</p>
+<hr />
+<h1><a name="m___t___">MÔ TẢ</a></h1>
+<p>Đúng như mọi công việc địa phương hoá, người dịch nên kiểm tra bản dịch bằng
+cách chạy chương trình đang dịch. Tuy nhiên, đây là tiến trình rất khó, dùng
+các văn lệnh cấu hình phức tạp, vì chưa có phương pháp tự động hiển thị mọi
+chuỗi đã dịch.</p>
+<p>Chương trình <strong>podebconf-display-po</strong> cũng có thể được gọi là <em>Bộ Kiểm Tra
+Nhanh Bản Địa Hoá</em> cho debconf. Nó phân tách tập tin PO, thử đoán hình thức
+của tập tin mẫu gốc, và hiển thị các chuỗi trên giao diện debconf.</p>
+<p>Không cần đăng nhập dưới người chủ (root), và <strong>podebconf-display-po</strong> không
+tương tác với bất kỳ thiết lập toàn hệ thống.</p>
+<p>
+</p>
+<hr />
+<h1><a name="t__y_ch___n">TÙY CHỌN</a></h1>
+<dl>
+<dt><strong><a name="h_help" class="item"><strong>-h</strong>, <strong>--help</strong></a></strong></dt>
+
+<dd>
+<p>Hiển thị bản tóm tắt cách sử dụng, rồi thoát.</p>
+</dd>
+<dt><strong><a name="f_frontend_giao_di_n" class="item"><strong>-f</strong>, <strong>--frontend=<em>GIAO_DIỆN</em></strong></a></strong></dt>
+
+<dd>
+<p>Chọn giao diện debconf khác.</p>
+</dd>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="c___n_th___n">CẨN THẬN</a></h1>
+<dl>
+<dt>
+<dd>
+<p>Vì <strong>podebconf-display-po</strong> nhờ <code>debconf</code> để hiển thị câu hỏi, môi trường
+của bạn phải được thiết lập để hiển thị câu hỏi đã dịch bằng ngôn ngữ của
+tập tin PO. Vậy nếu bạn cần kiểm tra bản dịch bằng một ngôn ngữ khác, chỉ
+cần sửa đổi tạm thời thiết lập , v.d.</p>
+<pre>
+  $ LANGUAGE=vi podebconf-display-po vi.po</pre>
+<p>Nếu tập tin PO không chuyển đổi được sang bảng mã hiện thời, các chuỗi được
+hiển thị chỉ bằng ngôn ngữ gốc (thường là tiếng Anh) thay cho các chuỗi
+dịch. Để tránh trường hợp bảng mã không tương ứng, khuyên bạn sử dụng một
+môi trường UTF-8 (Unicode).</p>
+</dd>
+<dt>
+<dd>
+<p>Trước phiên bản 0.8.3, <code>po-debconf</code> chỉ chèn vào tập tin PO tên của
+trường. Tuy nhiên, một số cuộc thảo luận trong hộp thư chung đã giải thích
+rằng định dạng văn bản phụ thuộc vào kiểu mẫu, v.d. chuỗi và luận lý có kiểu
+khác nhau vì chuỗi là câu hỏi mở, vào đó người dùng nên gõ văn bản, còn luận
+lý cơ bản là câu hỏi Có/Không, chỉ có hai đáp ứng có thể. Tác giả và người
+dịch nên suy tính trường hợp này khi tạo và dịch chuỗi.</p>
+<p>Tập tin PO được tạo ra bởi po-debconf &gt;= 0.8.3 cũng chèn vào tập tin PO
+kiểu của mẫu. Đối với phiên bản cũ, <strong>podebconf-display-po</strong> dùng thuật toán
+đơn giản để quyết định kiểu mẫu, đôi khi chạy sai.</p>
+</dd>
+<dt>
+<dd>
+<p>Giao diện <code>dialog</code>, khi dựa vào <code>whiptail</code>, bắt các ký hiệu của hệ thống,
+thì <strong>podebconf-display-po</strong> không thể bị <code>Ctrl-C</code> gián đoạn khi dùng giao
+diện này.</p>
+</dd>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="xem_c__ng">XEM CŨNG</a></h1>
+<p><em>debconf(1)</em></p>
+<p>
+</p>
+<hr />
+<h1><a name="t__c_gi___">TÁC GIẢ</a></h1>
+<pre>
+  Denis Barbier &lt;barbier@linuxfr.org&gt;</pre>
+
+</body>
+
+</html>

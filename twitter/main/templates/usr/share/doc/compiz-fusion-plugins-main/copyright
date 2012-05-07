@@ -1,0 +1,207 @@
+This package was debianized by Travis Watkins <amaranth@ubuntu.com> on
+Fri, 08 Jun 2007 08:27:02 -0500.
+
+It was downloaded from: 
+git://anongit.opencompositing.org/fusion/plugins-main
+
+Copyright: 
+
+ * Animation plugin for compiz/beryl
+ *
+ * animation.c
+ *
+ * Copyright : (C) 2006 Erkin Bahceci
+ * E-mail    : erkinbah@gmail.com
+ *
+ * Based on Wobbly and Minimize plugins by
+ *           : David Reveman
+ * E-mail    : davidr@novell.com>
+ *
+ * Particle system added by : (C) 2006 Dennis Kasprzyk
+ * E-mail                   : onestone@beryl-project.org
+ *
+ * Beam-Up added by : Florencio Guimaraes
+ * E-mail           : florencio@nexcorp.com.br
+ *
+ * Hexagon tessellator added by : Mike Slegeir
+ * E-mail                       : mikeslegeir@mail.utexas.edu>
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * Compiz expo plugin
+ *
+ * expo.c
+ *
+ * Copyright (c) 2006 Robert Carr <racarr@beryl-project.org>
+ *
+ * Authors:
+ * Robert Carr <racarr@beryl-project.org>
+ * Dennis Kasprzyk <onestone@beryl-project.org>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * beryl-plugins::jpeg.c - adds JPEG image support to beryl.
+ * Copyright: (C) 2006 Nicholas Thomas
+ *                     Danny Baumann (JPEG writing, option stuff)
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * Beryl Opacify
+ *
+ * Copyright (c) 2006 Kristian Lyngstøl <kristian@beryl-project.org>
+ * Ported to Compiz and BCOP usage by Danny Baumann <maniac@beryl-project.org>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+Copyright : resizeinfo.c
+
+ * Copyright (c) 2007 Robert Carr <racarr@beryl-project.org>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * Compiz ring switcher plugin
+ *
+ * ring.c
+ *
+ * Copyright : (C) 2007 by Danny Baumann
+ * E-mail    : maniac@opencompositing.org
+ *
+ * Based on scale.c and switcher.c:
+ * Copyright : (C) 2007 David Reveman
+ * E-mail    : davidr@novell.com
+ *
+ * Rounded corner drawing taken from wall.c:
+ * Copyright : (C) 2007 Robert Carr
+ * E-mail    : racarr@beryl-project.org
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * Beryl Snap Plugin
+ * Author : Guillaume "iXce" Seguin
+ * Email  : ixce@beryl-project.org
+ *
+ * Ported by : Patrick "marex" Niklaus
+ * Email     : marex@beryl-project.org
+ *
+ * Copyright (C) 2007 Guillaume Seguin
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * text.c - adds text image support to beryl.
+ * Copyright: (C) 2006 Patrick Niklaus
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * Compiz thumbnail plugin
+ *
+ * thumbnail.c
+ *
+ * Copyright : (C) 2007 by Dennis Kasprzyk
+ * E-mail    : onestone@beryl-project.org
+ *
+ * Based on thumbnail.c:
+ * Copyright : (C) 2007 Stjepan Glavina
+ * E-mail    : stjepang@gmail.com
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * winrules plugin for compiz
+ *
+ * Copyright (C) 2007 Bellegarde Cedric (gnumdk (at) gmail.com)
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+Copyright : neg.c put.c
+
+ * Copyright (c) 2006 Darryll Truchan <moppsy@comcast.net>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+The Debian packaging is (C) 2007, Travis Watkins <amaranth@ubuntu.com> and
+is licensed under the GPL, see `/usr/share/common-licenses/GPL'.

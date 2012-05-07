@@ -1,0 +1,138 @@
+This package was debianized by Paul Cager <paul-debian@home.paulcager.org>
+Wed, 14 May 2008 10:29:00 +0100.
+
+It was heavily modified to support the full Tomcat6 server stack by
+Thierry Carrez <thierry.carrez@ubuntu.com>, based on the great work done by
+the Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+on Tomcat 5.5 and initial packaging by David Pashley <david@davidpashley.com>.
+
+It was downloaded from http://tomcat.apache.org
+
+Copyright: 
+  Copyright (C) 2000-2007 Apache Software Foundation.
+  Copyright (C) International Business Machines Corporation 2002
+
+Authors:
+    Alex Chaffee
+    Alex Cruikshank [alex@epitonic.com]
+    Amy Roh
+    Andre de Jesus
+    Andrew R. Jaquith
+    Andy Clark
+    Aner Perez
+    Anil V (akv@eng.sun.com)
+    Anselm Baird-Smith
+    Arnaud  Le Hors, IBM
+    Bela Ban (modifications for synchronous replication)
+    Bill Barker
+    Bill Burke
+    Bip Thelin
+    Cedrik LIME
+    Carson McDonald
+    Costin@eng.sun.com
+    Craig R. McClanahan
+    Dan Milstein [danmil@shore.net]
+    Dan Sandberg
+    Daniel Rall
+    Danno Ferrin
+    David Becker
+    Denis Benoit
+    Eric Rescorla
+    Eric Ye, IBM
+    Fabien Carrion
+    Fabrizio Giustina
+    Filip Hanik
+    Gabriele Garuglieri
+    Gal Shachor [shachor@il.ibm.com]
+    Glenn L. Nielsen
+    Glenn Marcy, IBM
+    Greg Murray
+    Gunnar Rjnning
+    Hans Bergsten <hans@gefionsoftware.com>
+    Harish Prabandham
+    Henri Gomez [hgomez@apache.org]
+    Ignacio J. Ortega
+    Jacek Laskowski
+    Jacob Hookom [jacob@hookom.net]
+    James Duncan Davidson [duncan@eng.sun.com]
+    James Todd [gonzo@sun.com]
+    Jan Luehe
+    Jason Brittain
+    Jason Hunter [jch@eng.sun.com]
+    Jason van Zyl
+    Jayson Falkner
+    Jean-Francois Arcand
+    Jean-Frederic Clere
+    Jeffrey Rodriguez
+    John Holman
+    John McNally
+    Jon S. Stevens
+    Justyna Horwat
+    Keith Wannamaker [Keith@Wannamaker.org]
+    Kevin Seguin
+    Kief Morris (kief@kief.com)
+    Kin-man Chung
+    Larry Cable
+    Larry Isaacs
+    Malcolm Edgar
+    Mandar Raje
+    Mark Roth
+    Mark Thomas
+    Martin Cooper
+    Martin T Dengler [root@martindengler.com]
+    Mel Martinez [mmartinez@g1440.com]
+    Michael Glavassevich, IBM
+    Mladen Turk
+    Neil Graham, IBM
+    Nicola Ken Barozzi
+    Paul Speed
+    Peter Donald
+    Peter Lin
+    Peter Rossbach (pero@apache.org)
+    Pierre Delisle
+    Rafal Krzewski Rafal.Krzewski@e-point.pl
+    Rahul Srivastava, Sun Microsystems Inc.
+    Rainer Jung
+    Rajiv Mordani
+    Remy Maucharat
+    Remy Maucherat
+    Richard A. Sitze
+    Robert Field (inner SDEInstaller class)
+    Rod Waldhoff
+    Scott Sanders
+    Sean C. Sullivan
+    Sean Legassick
+    Sean Legassick
+    Shawn Bayern
+    Stan Bailes
+    Stefan Freyr Stefansson
+    Stefano Mazzocchi
+    TAMURA Kent, IBM
+    Takayuki Kaneko
+    Tim Fennell
+    Tim Funk
+    Tim Tye
+    Vivek Chopra
+    Yoav Shapira <yoavs@apache.org>
+
+License:
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+ 
+         http://www.apache.org/licenses/LICENSE-2.0
+ 
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+On Debian GNU/Linux and Ubuntu systems, the complete text of the Apache 2.0 
+License can be found in the /usr/share/common-licenses/Apache-2.0 file.
+
+The Debian packaging is Copyright (C) 2008, Paul Cager <paul-debian@home.paulcager.org>
+and is licensed under the Apache License version 2.
+
+Ubuntu full server stack repackaging is Copyright (C) 2008 Canonical Ltd.

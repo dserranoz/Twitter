@@ -1,0 +1,28 @@
+Format-Specification:
+    http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=196
+Upstream-Maintainer: gtk2-perl team
+Upstream-Author: muppet, <scott at asofyet dot org>
+ Göran Thyni, <gthyni at kirra dot net>
+ Guillaume Cottenceau <gc at mandrakesoft dot com>
+ Marc Lehmann <pcg at goof dot com>
+ Ross McFarland <rwmcfa1 at neces dot com>
+ Torsten Schoenfeld <kaffeetisch at web dot de>
+Upstream-Source: http://search.cpan.org/dist/Glib/
+Upstream-Name: Glib
+
+Files: *
+Copyright: Copyright (C) 2003-2009 by the gtk2-perl team
+License: LGPL-2.1+
+
+Files: debian/*
+Copyright: 2009, Ryan Niebur <ryanryan52@gmail.com>
+License: LGPL-2.1+
+
+License: LGPL-2.1+
+    This library is free software; you can redistribute it and/or modify it under
+    the terms of the GNU Library General Public License as published by the Free
+    Software Foundation; either version 2.1 of the License, or (at your option) any
+    later version.
+    .
+    A copy of the LGPL-2.1 can be found at /usr/share/common-licenses/LGPL-2.1 on
+    any Debian system.

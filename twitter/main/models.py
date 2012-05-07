@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import post_save
+from django.contrib.auth.models import User
 
 
 class Auth(models.Model):
@@ -19,3 +21,16 @@ class Tweet(models.Model):
 class Biography(models.Model):
     age = models.CharField(max_length=2)
     about_me = models.TextField(max_length=150)
+
+
+class Users(models.Model):
+    user = models.OneToOneField(User)
+    birthday = models.DateField()
+    name = models.CharField(max_length=30)
+
+    def __unicode__(self):
+        return self.name
+
+#def create_user(sender, instance, **kwargs):
+#    users, new = User.objects.get_or_create(user=instance)
+#post_save.connect(create_user, User)

@@ -1,0 +1,69 @@
+Window manager warning: 0 stored in GConf key /desktop/gnome/peripherals/mouse/cursor_size is out of range 1 to 128
+Window manager warning: Failed to load theme "Clearlooks": Failed to find a valid file for theme Clearlooks
+
+FAIL: javax.swing.text.BoxView.spans
+  line 56:  [5] -- boolean passed to check was false
+  line 61:  [6] -- boolean passed to check was false
+  line 67:  [8] -- boolean passed to check was false
+FAIL: javax.swing.border.TitledBorder.setTitlePosition
+  line 42:  [1] -- got 0 but expected 2
+FAIL: javax.swing.border.TitledBorder.constructors
+  line 80: (Border) [5] -- got 0 but expected 2
+  line 101: (Border, String) [5] -- got 0 but expected 2
+  line 205: (String) [5] -- got 0 but expected 2
+FAIL: javax.swing.border.TitledBorder.getTitlePosition
+  line 42:  [1] -- got 0 but expected 2
+javax.swing.event.ListDataEvent[type=1,index0=0,index1=0]
+FAIL: javax.swing.JTextArea.preferredSize
+  line 54:  [6] -- boolean passed to check was false
+  line 55:  [7] -- boolean passed to check was false
+  line 57:  [8] -- boolean passed to check was false
+  line 58:  [9] -- boolean passed to check was false
+  line 60:  [10] -- boolean passed to check was false
+  line 61:  [11] -- boolean passed to check was false
+FAIL: java.lang.Integer.parseInt
+  line 117: Leading '+' does not throw NumberFormatException [1] -- forced fail
+sun.misc.Launcher$AppClassLoader@17182c1
+FAIL: java.text.DecimalFormat.format
+  line 386: locale: GERMANY [1] -- Objects were not equal.  Use -debug for more information.
+  line 391: locale: ITALY [1] -- Objects were not equal.  Use -debug for more information.
+Feb 17, 2012 9:10:54 AM java.util.prefs.FileSystemPreferences$2 run
+INFO: Created user preferences directory.
+FAIL: java.util.Currency.Taiwan
+  line 57: Currency fraction digits retrieval check (2). [1] -- got 2 but expected 0
+Exception in thread "Timer-1" java.lang.RuntimeException: eat it!!!
+	at gnu.testlet.java.util.Timer.taskException$1.run(taskException.java:47)
+	at java.util.TimerThread.mainLoop(Timer.java:534)
+	at java.util.TimerThread.run(Timer.java:484)
+300
+240
+-780
+-720
+0
+-60
+1. ERROR in /build/buildd/openjdk-6-6b20-1.9.13/build/mauve-hotspot/gnu/testlet/java/awt/image/ColorModel/MyColorModel.java  line 64:
+	coerceDataWorker(raster, isAlphaPremultiplied);
+	^^^^^^^^^^^^^^^^
+  The method coerceDataWorker(WritableRaster, boolean) is undefined for the type MyColorModel
+1 problem (1 error)FAIL: java.awt.KeyboardFocusManager.getFocusOwner
+  line 53:  [1] -- uncaught exception:
+   java.lang.SecurityException: this KeyboardFocusManager is not installed in the current thread's context
+   at java.awt.KeyboardFocusManager.checkCurrentKFMSecurity(KeyboardFocusManager.java:3091)
+   at java.awt.KeyboardFocusManager.setGlobalFocusOwner(KeyboardFocusManager.java:514)
+   at gnu.testlet.java.awt.KeyboardFocusManager.TestKeyboardFocusManager.setGlobalFocusOwner(TestKeyboardFocusManager.java:40)
+   at gnu.testlet.java.awt.KeyboardFocusManager.getFocusOwner.test01(getFocusOwner.java:53)
+   at gnu.testlet.java.awt.KeyboardFocusManager.getFocusOwner.test(getFocusOwner.java:37)
+   at RunnerProcess.runtest(RunnerProcess.java:375)
+   at RunnerProcess.runAndReport(RunnerProcess.java:430)
+   at RunnerProcess.main(RunnerProcess.java:242)
+FAIL: java.awt.Panel.TestPanelRepaint
+  Test timed out.  Use -timeout [millis] option to change the timeout value.
+Window manager warning: Invalid WM_TRANSIENT_FOR window 0x400048 specified for 0x40004d ( ).
+Position: 26, Limit: 26
+Position: 26, Limit: 26
+true
+
+TEST RESULTS:
+10 of 2567 tests failed.  18 total calls to harness.check() failed.
+793.59user 72.73system 14:30.41elapsed 99%CPU (0avgtext+0avgdata 0maxresident)k
+70440inputs+29752outputs (67major+482726minor)pagefaults 0swaps

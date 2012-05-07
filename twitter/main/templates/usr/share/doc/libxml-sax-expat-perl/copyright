@@ -1,0 +1,18 @@
+This package was debianized by Ardo van Rangelrooij <ardo@debian.org>
+on Mon, Dec 31, 2001, 18:45:32 -0600.
+
+It was downloaded from the Comprehensive Perl Archive Network (CPAN)
+at http://search.cpan.org/dist/XML-SAX-Expat/ .
+
+Upstream Authors: Robin Berjon <robin@knowscape.com>
+
+Copyright and license information:
+
+  Copyright (c) 2001-2008 Robin Berjon. All rights reserved. This program is
+  free software; you can redistribute it and/or modify it under the same
+  terms as Perl itself.
+
+Perl is distributed under your choice of the GNU General Public License or
+the Artistic License.  On Debian GNU/Linux systems, the complete text of the
+GNU General Public License can be found in `/usr/share/common-licenses/GPL'
+and the Artistic Licence in `/usr/share/common-licenses/Artistic'.

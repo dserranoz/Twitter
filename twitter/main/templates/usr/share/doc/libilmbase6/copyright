@@ -1,0 +1,45 @@
+Debianized by Adeodato Simó <dato@net.com.org.es>	2007-11-01
+
+The sources of IlmBase can be downloaded from:
+
+    http://download.savannah.gnu.org/releases/openexr
+
+And the project homepage is:
+
+    http://www.openexr.com
+
+Upstream authors:
+
+    Florian Kainz <kainz@ilm.com>
+    Rod Bogart <rgb@ilm.com>
+    Drew Hess <dhess@ilm.com>
+    Bill Anderson <wja@ilm.com>
+    Wojciech Jarosz <wjarosz@ucsd.edu>
+
+Copyright and license terms:
+
+  - The sources of IlmBase are:
+
+    | Copyright (C) 2002, 2005, 2006, 2007 Industrial Light & Magic,
+    | a division of Lucas Digital Ltd. LLC
+
+    And licensed under the terms of the BSD license. On Debian systems, the
+    full text of the BSD License is available in /usr/share/common-licenses/BSD.
+
+  - The file Imath/ImathPlatform.h contains code which is:
+
+    | Copyright (C) 2001 Boost.org
+
+    Under the following license:
+
+    | Permission to copy, use, modify, sell and and distribute this
+    | software is granted provided this copyright notice appears in all
+    | copies. This software is provided "as is" without express or implied
+    | warranty, and with no claim as to its suitability for any purpose.
+
+  - The packaging scripts in the debian/ subdirectory are:
+
+    | Copyright (c) 2007-2008  Adeodato Simó
+    | Copyright (c) 2009       Cyril Brulebois
+
+    And licensed under the same terms of IlmBase itself.

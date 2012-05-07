@@ -1,0 +1,34 @@
+This package was debianized by Takashi Okamoto <tora@debian.org> on
+Mon,  5 Nov 2001 08:15:04 +0900.
+
+It was downloaded from <http://commons.apache.org/digester/>
+
+Upstream Authors: Craig McClanahan <craigmcc@apache.org>,
+                  Robert Burrell Donkin <rdonkin@apache.org>,
+                  Scott Sanders <sanders@totalsync.com>,
+                  James Strachan <jstrachan@apache.org>,
+                  Jason van Zyl <jvanzyl@apache.org>,
+                  Tim OBrien <tobrien@apache.org>,
+                  Jean-Francois Arcand <jfarcand@apache.org>,
+                  Simon Kitching <skitching@apache.org>,
+                  Rahul Akolkar <rahul@apache.org>,
+                  Bradley M. Handy <bhandy@users.sf.net>,
+                  Christopher Lenz,
+                  Ted Husted,
+                  David H. Martin,
+                  Henri Chen,
+                  Janek Bogucki,
+                  Mark Huisman,
+                  Paul Jack,
+                  Anton Maslovsky,
+                  Matt Cleveland,
+                  Gabriele Carcassi,
+                  Wendy Smoak <java@wendysmoak.com>,
+                  Kevin Ross <kevin.ross@iverticalleap.com>
+
+Copyright: © 2001-2009 The Apache Software Foundation
+
+License: Apache 2.0
+
+On Debian systems the full text of the Apache License can be found
+in `/usr/share/common-licenses/Apache-2.0'.

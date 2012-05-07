@@ -108,6 +108,8 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
+AUTH_PROFILE_MODULE = 'users.Users'
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -144,3 +146,9 @@ LOGGING = {
         },
     }
 }
+
+
+LOGIN_URL = '/user/login/'
+
+
+LOGIN_REDIRECT_URL = '/user/login/'

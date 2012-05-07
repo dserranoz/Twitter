@@ -32,25 +32,47 @@
 </style>
 </head>
 <body>
-<a href="{% url add_User %}">Registrar</a>
-	<table border="1" align="center" width="800" class="content">
-
-	<div id="header" class="logo"></div>
-		<tr> </tr> 
-		<tr> 
-			<td width="230" height="330"> </td> 
-			<td width="500" class="img1"></td> 
-			<td width="302"> 
-<table border="1" >
-<tr> <td width="302" height="109"> 
-<input type='image' name='boton' value='' style='width:106px; height:30px; background-image: url({{ STATIC_URL }}iniciar.png); no-repeat;'>
-</td> </tr> 
-<tr> <td width="302" height="207"> </td> </tr> 
+<div id="header" class="logo"></div>
+<table border="0" align="center" width="800" class="content">
+	<tr> </tr> 
+	<tr> 
+		<td width="230" height="330"> </td> 
+		<td width="500" class="img1"> </td> 
+		<td width="302"> 
+			<table border="1">
+				<tr> 
+					<td aling="center"> 
+						{% block content %}
+							<form action="" method="post">
+								{% csrf_token %}
+								{% if form.errors %}<p>Please correct the following fields:</p>{% endif %}	
+									<div class="Register_div">
+										{% if form.username.errors %}<p class="error">{{ form.username.errors }}</p>{% endif %}
+										<p> <label for="username"{% if form.username.errors %} class="error" {% endif %}>Username:</label> </p>
+										<p> {{ form.username }} </p>
+									</div>
+									<div class="Register_div">
+										{% if form.password.errors %}<p class="error"> {{ form.password.errors }} </p> {% endif %}
+										<p> <label for="password"{% if form.password.errors %} class="error" {% endif %}>Password:</label> </p>
+										<p> {{ form.password }} </p>
+									</div>
+									<p> <input type="submit" alt="register"/> </p>
+									<p> Forgot your password? <a href="/resetpassword/">Reset it!</a> </p>
+							</form>
+						{% endblock %}
+					</td>
+				
+				</tr> 
+				<tr> 
+					<td width="302" height="207"> 
+						<a href="{% url User_Registration %}">Sing up for Twitter</a>
+					</td> 
+				</tr> 
+			</table>
+		</td> 
+		<td> </td> 
+	</tr> 
+	<tr> </tr> 
 </table>
-			</td> 
-			<td> </td> 
-		</tr> 
-		<tr> </tr> 
-    </table>
 </body>
 </html>

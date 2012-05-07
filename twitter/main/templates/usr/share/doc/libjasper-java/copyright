@@ -1,0 +1,15 @@
+This package was debianized by Stefan Gybas <sgybas@debian.org> on
+12-Feb-2002.
+
+The source was downloaded from <http://tomcat.apache.org>.
+
+Jasper (which is a part of Apache Tomcat 5.5) is licensed under
+the terms of the Apache 2.0 License. Copyright 1999-2007 
+The Apache Software Foundation.
+
+The modifications and packaging for Debian are Copyright (C) 2005
+Arnaud Vandyck, Copyright (C) 2006 Marcus Better, and are released
+under the same license as Tomcat itself.
+
+On Debian systems, the complete text of the Apache 2.0
+License can be found in `/usr/share/common-licenses/Apache-2.0'.

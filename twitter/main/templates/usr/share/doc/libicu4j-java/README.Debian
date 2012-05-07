@@ -1,0 +1,16 @@
+icu4j for Debian
+----------------
+
+Taverna has a runtime dependency on this library. This was the initial
+motivation to provide a package, which once you are aware of it seems
+of considerable value for the distribution, though.
+
+Please check out http://pkg-escience.alioth.debian.org, follow the link
+to the Wiki page and see if you want to maintain or add any package to
+your liking.
+
+Best,
+
+Steffen
+
+ -- Steffen Moeller <steffen_moeller@gmx.de>, Fri,  5 May 2006 19:49:26 +0200

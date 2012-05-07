@@ -1,0 +1,14 @@
+
+<html>
+<head>
+	<title>New sesion</title>
+</head>
+<body>
+<div> 
+<p> Name: {{ Users.user }} </p>
+</div>
+<div> {% if user.is_authenticated %}<p> <a href="/user/logout">Logout</a></p>{% else %}<p><a href="/user/login">Login</a> </p> 
+{% endif %}
+</div>
+</body>
+</html>

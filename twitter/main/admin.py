@@ -1,6 +1,5 @@
 from django.contrib import admin
-from main.models import Tweet, Biography
+from main.models import Users
 
 
-admin.site.register(Tweet)
-admin.site.register(Biography)
+admin.site.register(Users)

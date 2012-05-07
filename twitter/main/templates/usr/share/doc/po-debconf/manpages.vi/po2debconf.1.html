@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TÊN</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+
+<!-- INDEX BEGIN -->
+<div name="index">
+<p><a name="__index__"></a></p>
+<!--
+
+<ul>
+
+	<li><a href="#t__n">TÊN</a></li>
+	<li><a href="#t__m_t___t">TÓM TẮT</a></li>
+	<li><a href="#m___t___">MÔ TẢ</a></li>
+	<li><a href="#t__y_ch___n">TÙY CHỌN</a></li>
+	<li><a href="#_____nh_d___ng_xu___t">ĐỊNH DẠNG XUẤT</a></li>
+	<li><a href="#xem_c__ng">XEM CŨNG</a></li>
+	<li><a href="#t__c_gi___">TÁC GIẢ</a></li>
+</ul>
+
+-->
+
+
+</div>
+<!-- INDEX END -->
+
+<p>
+</p>
+<hr />
+<h1><a name="t__n">TÊN</a></h1>
+<p>po2debconf — trộn tập tin mẫu chủ với các tập tin PO</p>
+<p>
+</p>
+<hr />
+<h1><a name="t__m_t___t">TÓM TẮT</a></h1>
+<p><strong>po2debconf</strong> [<strong>-v</strong>] [<strong>-h</strong>] [<strong>--podir=<em>THƯ_MỤC</em></strong>] [<strong>-o <em>TẬP_TIN</em></strong>]
+[<strong>-e <em>CHUỖI</em></strong>] <em>chủ</em></p>
+<p>
+</p>
+<hr />
+<h1><a name="m___t___">MÔ TẢ</a></h1>
+<p>Chương trình này đọc mọi tập tin PO và một tập tin <em class="file">templates</em> riêng lẻ, và
+tạo một tập tin mẫu Debconf chứa mọi bản dịch, tương tự với tập tin được tạo
+bởi <em>debconf-mergetemplate(1)</em> (từ gói <code>debconf-utils</code>). Mặc định là các
+tập tin PO được tìm trong thư mục con <em class="file">po</em> bên dưới vị trí của tập tin chủ.</p>
+<p>Để giúp chuyển tiếp mã ngôn ngữ cho tiếng Na Uy Bokm&aring;l, mã ngôn ngữ
+<strong>no</strong> và <strong>nb</strong> được xử lý đặc biệt. Đã có tập tin <em class="file">no.po</em> thì nó nên bị
+thay tên thành <em class="file">nb.po</em>.  Dùng <em class="file">nb.po</em> sẽ làm cho các bản dịch kiểu cả
+<code>-no</code> lẫn <code>-nb</code> đều sẵn sàng trong tập tin mẫu.</p>
+<p>Dòng bắt đầu với dấu thăng (<code>#</code>) thì là ghi chú trong tập tin mẫu. Ghi chú
+hữu ích để cung cấp chi tiết cho người dịch, cũng bị hủy bởi
+<strong>po2debconf</strong>. Ghi chú đặc biệt đã được giới thiệu trong <code>po-debconf</code> 1.0,
+theo dạng <code>#flag:chỉ_thị</code>. <code>#flag:partial</code> là chỉ thị duy nhất được
+<strong>po2debconf</strong> giải thích. Bình thường khi một trường chứa vài đoạn văn khác
+nhau (v.d. <code>__Choices</code> và <code>_Description</code>), nó được đánh dấu « đã dịch »
+chỉ nếu tất cả các đoạn văn đã được dịch. Khi một trường chứa
+<code>#flag:partial</code>, có thể hỗn hợp các chuỗi đã dịch và chưa dịch.</p>
+<p>
+</p>
+<hr />
+<h1><a name="t__y_ch___n">TÙY CHỌN</a></h1>
+<dl>
+<dt><strong><a name="h_help" class="item"><strong>-h</strong>, <strong>--help</strong></a></strong></dt>
+
+<dd>
+<p>Hiển thị bản tóm tắt cách sử dụng, rồi thoát.</p>
+</dd>
+<dt><strong><a name="v_verbose" class="item"><strong>-v</strong>, <strong>--verbose</strong></a></strong></dt>
+
+<dd>
+<p>Xử lý ở chế độ chi tiết (xuất nhiều dữ liệu diễn tả tiến trình, hữu ích để
+gỡ lỗi).</p>
+</dd>
+<dt><strong><a name="podir_th_m_c" class="item"><strong>--podir=<em>THƯ_MỤC</em></strong></a></strong></dt>
+
+<dd>
+<p>Đặt thư mục chứa các tập tin PO. Mặc định là tìm các tập tin PO trong thư
+mục con <em class="file">po</em> bên dưới vị trí của tập tin chủ.</p>
+</dd>
+<dt><strong><a name="o_output_t_p_tin" class="item"><strong>-o</strong>, <strong>--output=<em>TẬP_TIN</em></strong></a></strong></dt>
+
+<dd>
+<p>Đặt tên tập tin xuất (mặc định là thiết bị xuất chuẩn).</p>
+</dd>
+<dt><strong><a name="e_encoding_chu_i" class="item"><strong>-e</strong>, <strong>--encoding=<em>CHUỖI</em></strong></a></strong></dt>
+
+<dd>
+<p><table cellspacing="0" cellpadding="0"><tr><td>Chuyển đổi bảng mã. Đối số có ba giá trị có thể:
+<tr><td> • <code>utf8</code><td>chuyển đổi sang UTF-8
+<tr><td> • <code>po</code><td>không thay đổi bảng mã
+<tr><td> • <code>popular</code><td>chuyển đổi bảng mã của tập tin nhập phụ thuộc vào ngôn ngữ :
+<tr><td><td>biến môi trường <code>PODEBCONF_ENCODINGS</code> phải chỉ tới
+<tr><td><td>một tên tập tin chứa sơ đồ bảng mã.</table></p>
+<p>Tên tập tin như vậy hình như :</p>
+<pre>
+  #
+  #   Dấu thăng là ký hiệu ghi chú
+  #
+  cs       ISO-8859-2
+  da       ISO-8859-1
+  de       ISO-8859-1
+  el       ISO-8859-7</pre>
+<p>v.v.</p>
+<p>Bảng mã mặc định từng là <code>popular</code>: nó đã được chuyển đổi sang <code>utf8</code> kể
+từ po-debconf 0.9.0.</p>
+</dd>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="_____nh_d___ng_xu___t">ĐỊNH DẠNG XUẤT</a></h1>
+<p>Kể từ debconf 1.2.0, định dạng của mẫu đã thay đổi: bảng mã thuộc về tên
+trường, tức là tên trường là <code>foo-ngôn_ngữ.bảng_mã</code>. Phiên bản
+debconf cũ gặp trường này thì bỏ qua, không xuất thông điệp: chỉ hiển thị
+văn bản gốc.</p>
+<p>Tập tin <em class="file">po/output</em> (nếu có) có quyền cao hơn các giá trị mặc định đại diện
+bảng mã và định dạng kết xuất. Nó chứa một dòng riêng lẻ có hai trường:
+trường thứ nhất là định dạng kết xuất (hiện thời giá trị hợp lệ là 1 [trường
+dạng <code>foo-ngôn_ngữ</code>] và 2 [trường dạng <code>foo-ngôn_ngữ.bảng_mã</code>) và
+trường thứ hai là bảng mã, ví dụ :</p>
+<pre>
+   echo '2 utf8' &gt; po/output</pre>
+<p>cho phép <strong>po2debconf</strong> chuyển đổi văn bản sang UTF-8.</p>
+<p>Bảng mã được đặt thành <code>po</code> hay <code>utf8</code> thì định dạng xuất luôn luôn được
+đặt thành 2, để mà phiên bản debconf cũ sẽ không thử hiển thị văn bản theo
+bảng mã sai.</p>
+<p>
+</p>
+<hr />
+<h1><a name="xem_c__ng">XEM CŨNG</a></h1>
+<p><em>debconf-gettextize(1)</em>, <em>debconf-updatepo(1)</em>, <em>po-debconf(7)</em>.</p>
+<p>
+</p>
+<hr />
+<h1><a name="t__c_gi___">TÁC GIẢ</a></h1>
+<pre>
+  Denis Barbier &lt;barbier@linuxfr.org&gt;</pre>
+
+</body>
+
+</html>

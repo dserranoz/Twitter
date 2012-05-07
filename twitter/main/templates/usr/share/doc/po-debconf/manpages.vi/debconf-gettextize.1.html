@@ -1,0 +1,170 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TÊN</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+
+<!-- INDEX BEGIN -->
+<div name="index">
+<p><a name="__index__"></a></p>
+<!--
+
+<ul>
+
+	<li><a href="#t__n">TÊN</a></li>
+	<li><a href="#t__m_t___t">TÓM TẮT</a></li>
+	<li><a href="#m___t___">MÔ TẢ</a></li>
+	<li><a href="#t__y_ch___n">TÙY CHỌN</a></li>
+	<li><a href="#c___n_th___n">CẨN THẬN</a></li>
+	<li><a href="#xem_c__ng">XEM CŨNG</a></li>
+	<li><a href="#t__c_gi___">TÁC GIẢ</a></li>
+</ul>
+
+-->
+
+
+</div>
+<!-- INDEX END -->
+
+<p>
+</p>
+<hr />
+<h1><a name="t__n">TÊN</a></h1>
+<p>debconf-gettextize — trích ra tập tin PO bản dịch của mẫu debconf</p>
+<p>
+</p>
+<hr />
+<h1><a name="t__m_t___t">TÓM TẮT</a></h1>
+<p><strong>debconf-gettextize</strong> [<strong>-v</strong>] [<strong>-h</strong>] [<strong>--podir=<em>THƯ_MỤC</em></strong>] [<strong>--choices</strong>]
+[<strong>--merge</strong>] <em>chủ</em> [<em>chủ</em> ...]</p>
+<p>
+</p>
+<hr />
+<h1><a name="m___t___">MÔ TẢ</a></h1>
+<p>Các tập tin <em class="file">/var/lib/dpkg/info/*.templates</em> được debconf đọc thì chứa cả
+văn bản tiếng Anh lẫn bản dịch đều trong cùng tập tin. Tuy nhiên, trong gói
+mã nguồn các bản dịch được quản lý trong tập tin riêng để giúp người
+dịch. Trong bản thực hiện đầu tiên, một tập tin <em class="file">templates</em> chủ chỉ chứa
+văn bản tiếng Anh, còn tập tin <em class="file">templates.<em>xx</em></em> chứa các chuỗi cả hai gốc
+và được dịch cho ngôn ngữ <em>xx</em>.  Chương trình <strong>debconf-mergetemplate</strong> đã
+trộn các tập tin mẫu chủ và được dịch.</p>
+<p>Bản thực hiện mới với <code>po-debconf</code> dựa vào <code>gettext</code>. Nhà duy trì đánh dấu
+mỗi trường có thể dịch được bằng cách thêm dấu gạch dưới vào trước; các
+chuỗi tiếng Anh được trích tự động ra một tập tin POT; người dịch làm việc
+với tập tin PO chuẩn; và <strong>po2debconf</strong> tạo ra một tập tin mẫu đã trộn có
+cùng cấu trúc.</p>
+<p>Chương trình <strong>debconf-gettextize</strong> đã được thiết kế ban đầu để giúp nâng cấp
+lên bản thức hiện mới.</p>
+<dl>
+<dt>
+<dd>
+<p>Nó đọc một danh sách các tập tin chủ và các bản dịch tương ứng, rồi tạo ra
+các tập tin <em class="file">po/*.po</em> cho mỗi ngôn ngữ sang đó chuỗi đã được dịch.</p>
+</dd>
+<dt>
+<dd>
+<p>Mỗi tập tin nhập vào có tên mới với hậu tố <code>.old</code> (cũ), và một tập tin chủ
+mới ghi đè lên tập tin cũ; nó trùng với tập tin chủ trước, trừ có một dấu
+gạch dưới đằng trước mỗi trường có thể dịch được. Nhà phát triển thì có thể
+chọn những trường cần dịch, và những trường cần bỏ qua vì không chứa giá trị
+phụ thuộc vào miền địa phương.</p>
+</dd>
+<dt>
+<dd>
+<p>Tập tin <em class="file">po/POTFILES.in</em> cũng được tạo. Nó chứa danh sách các tập tin
+<em class="file">templates</em> nên được <strong>debconf-updatepo</strong> xử lý.</p>
+</dd>
+</dl>
+<p>Bình thường chương trình <strong>debconf-gettextize</strong> nên được chạy chỉ một lần khi
+chuyển dạng từ bản thực hiện thứ nhất sang định dạng <code>po-debconf</code>, nhưng nó
+cũng có thể được dùng về sau để chuyển dạng một trường <code>_Choices</code> sang
+<code>__Choices</code> (hay ngược lại) mà không mất bản dịch, khi dùng cờ <a href="#merge"><code>--merge</code></a>
+(cùng với <a href="#choices"><code>--choices</code></a> hay không).  Mẫu đã muốn mà chứa các trường
+<code>_Choices</code> hay <code>__Choices</code> cần sửa đổi thì phải được sao chép vào một tập
+tin mẫu tạm thời, mà được gửi qua cho <strong>debconf-gettextize</strong> dưới dạng một
+đối số.  Sau đó thì làm các bước sau :</p>
+<ol>
+<li>
+<p><strong>po2debconf</strong> được chạy trên tập tin mẫu này để tạo ra một tập tin mẫu đã
+dịch.</p>
+</li>
+<li>
+<p>Tập tin mẫu đã dịch thì được xử lý như nói trên, và các tập tin PO được tạo
+ra.</p>
+</li>
+<li>
+<p>Tập tin PO mới tạo được trộn với tập tin PO đã tồn tại.</p>
+</li>
+</ol>
+<p>Trộn các tập tin PO thì mỗi trường kiểu <code>_Choices</code> phải bị thay thế bằng
+kiểu<code>__Choices</code> (hay ngược lại) trong tập tin mẫu gốc trước khi chạy
+<strong>debconf-updatepo</strong>, không thì các bản dịch mới bị đánh dấu « dịch mờ ».</p>
+<p>
+</p>
+<hr />
+<h1><a name="t__y_ch___n">TÙY CHỌN</a></h1>
+<dl>
+<dt><strong><a name="h_help" class="item"><strong>-h</strong>, <strong>--help</strong></a></strong></dt>
+
+<dd>
+<p>Hiển thị bản tóm tắt cách sử dụng chương trình, sau đó thoát.</p>
+</dd>
+<dt><strong><a name="v_verbose" class="item"><strong>-v</strong>, <strong>--verbose</strong></a></strong></dt>
+
+<dd>
+<p>Xử lý ở chế độ chi tiết (xuất nhiều dữ liệu diễn tả tiến trình, hữu ích để
+gỡ lỗi).</p>
+</dd>
+<dt><strong><a name="podir_th_m_c" class="item"><strong>--podir=<em>THƯ_MỤC</em></strong></a></strong></dt>
+
+<dd>
+<p>Đặt thư mục chứa các tập tin PO. Mặc định là tìm các tập tin PO trong thư
+mục con <em class="file">po</em> bên dưới vị trí của tập tin chủ thứ nhất.</p>
+</dd>
+<dt><strong><a name="choices" class="item"><strong>--choices</strong></a></strong></dt>
+
+<dd>
+<p>Mặc định là <strong>debconf-gettextize</strong> thay thế các trường kiểu <code>Choices</code> bằng
+kiểu <code>_Choices</code>.  Bật cờ này thì ghi trường kiểu <code>__Choices</code> thay vào đó.</p>
+</dd>
+<dt><strong><a name="merge" class="item"><strong>--merge</strong></a></strong></dt>
+
+<dd>
+<p>Bật cờ này thì các chuỗi được trộn với các tập tin PO đã tồn tại. Không sửa
+đổi tập tin mẫu hay <em class="file">po/POTFILES.in</em>.</p>
+</dd>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="c___n_th___n">CẨN THẬN</a></h1>
+<p>Trường <code>Default</code> là đặc biệt khi mẫu có kiểu <code>Select</code> hay <code>Multiselect</code>,
+vì phải chọn một giá trị trong danh sách các tùy chọn <strong>English</strong>, ngay cả
+đối với giá trị đã địa phương hoá. Bình thường không cho phép thay đổi
+trường này, nhưng trong rất ít trường hợp, giá trị đã địa phương hoá vẫn có
+ý nghĩa (v.d. để chọn ngôn ngữ mặc định của ứng dụng). Để cho người dịch
+biết trường <code>Default</code> đã địa phương hoá cũng là đặc biệt, theo quy ước bạn
+cần phải gọi nó <code>_DefaultChoice</code> thay cho <code>_Default</code>.</p>
+<p>
+</p>
+<hr />
+<h1><a name="xem_c__ng">XEM CŨNG</a></h1>
+<p><em>debconf-updatepo(1)</em>, <em>po2debconf(1)</em>, <em>debconf-devel(7)</em>,
+<em>po-debconf(7)</em>.</p>
+<p>
+</p>
+<hr />
+<h1><a name="t__c_gi___">TÁC GIẢ</a></h1>
+<pre>
+  Denis Barbier &lt;barbier@linuxfr.org&gt;
+  Martin Quinson &lt;martin.quinson@ens-lyon.fr&gt;</pre>
+
+</body>
+
+</html>
