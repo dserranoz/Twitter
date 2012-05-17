@@ -1,45 +1,36 @@
+
 <html>
 <head>
-	<title>Register User</title>
-  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-  
-  <script>
-  $(document).ready(function() {
-    $("#id_birthday").datepicker();
-  });
-  </script>
-<style type="text/css">
-#header{
-	width: 1349px;
-	height: 50px;
-	background-color: #252525;
-}
-.content{
-	width: 1349px;
-	height: 545px;
-	background-image: url({{ STATIC_URL }}fondo.jpg);
-}
-.tablee{
-	background-color: white;
-}
-.logo{
-	background: url({{ STATIC_URL }}logoblanco.png) no-repeat;
-}
-.img1{
-	background: url({{ STATIC_URL }}nocturno.png) no-repeat;
-}
-.inciarsesion{
-	background-image: url({{ STATIC_URL }}iniciar.png) no-repeat;
-	width: 106px;
-	height: ;
-}
-</style>
+<title>Register User</title>
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<div id="header" class="logo"></div>
-<table border="1" align="center" width="800">
+<!--Header Begin-->
+<div id="header">
+  <div class="center">
+    <div id="logo"><a href="#">Calliope</a></div>
+    <!--Menu Begin-->
+    <div id="menu">
+      <ul>
+        <li><a href="{% url LoginRequest %}"><span>Home</span></a></li>
+        <li><a href="/user/login"><span>Login</span></a></li>
+      </ul>
+    </div>
+    <!--Menu END-->
+  </div>
+</div>
+<!--Header END-->
+<!--SubPage Toprow Begin-->
+<div id="toprowsub">
+  <div class="center">
+    <h2>User Register</h2>
+  </div>
+</div>
+
+<div id="bottomrow">
+  <div id="box2holder">
+<table border="0" align="center" width="800">
 	<tr> <td align="center"> Join Twitter today. </td> </tr>
 	<tr> <td align="center"> 
 		{% block content %}
@@ -66,21 +57,18 @@
 						<p> <label for="password1"{% if form.password1.errors %} class="error" {% endif %}>Verify Password:</label> </p>
 						<p> {{ form.password1 }} </p>
 					</div>
-					<div class="Register_div">
-						{% if form.birthday.errors %}<p class="error"> {{ form.birthday.errors }} </p> {% endif %}
-						<p> <label for="birthday"{% if form.birthday.errors %} class="error" {% endif %}>Birthday:</label> </p>
-						<p> {{ form.birthday }} </p>
-					</div>
-					<div class="Register_div">
-						{% if form.name.errors %}<p class="error"> {{ form.name.errors }} </p> {% endif %}
-						<p> <label for="name"{% if form.name.errors %} class="error" {% endif %}>Name:</label> </p>
-						<p> {{ form.name }} </p>
-					</div>
 					<p> <input type="submit" alt="register"/> </p>
 			</form>
 		{% endblock %}
 	 </td></tr>
-	 <tr> <td> <a href="{% url LoginRequest %}">Home</a> </td> </tr>
 </table>
+  </div>
+</div>
+<!--BottomRow END-->
+<!--Footer Begin-->
+<div id="footer">
+  <div class="foot"> <span>my Twiteer</span></div>
+</div>
+<!--Footer END-->
 </body>
 </html>

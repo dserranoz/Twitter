@@ -1,36 +1,33 @@
 from django.db import models
-from django.db.models.signals import post_save
 from django.contrib.auth.models import User
-
-
-class Auth(models.Model):
-    image = models.ImageField(upload_to="img")
-    born_date = models.DateField()
-    location = models.CharField(max_length=25)
-    tweets = models.CharField(max_length=140)
-    Biography = models.ForeignKey('Biography')
-    user = models.OneToOneField('auth.User')
 
 
 class Tweet(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.TextField(max_length=150)
-    auth = models.ForeignKey('Auth')
-
-
-class Biography(models.Model):
-    age = models.CharField(max_length=2)
-    about_me = models.TextField(max_length=150)
-
-
-class Users(models.Model):
-    user = models.OneToOneField(User)
-    birthday = models.DateField()
-    name = models.CharField(max_length=30)
+    auth = models.ForeignKey('UserProfile')
 
     def __unicode__(self):
-        return self.name
+        return '%s' % self.status
 
-#def create_user(sender, instance, **kwargs):
-#    users, new = User.objects.get_or_create(user=instance)
-#post_save.connect(create_user, User)
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User)
+    followin = models.ManyToManyField('UserProfile', blank=True)
+    image = models.ImageField(upload_to="main/static/img", blank=True)
+    birthday = models.DateField(auto_now=True)
+    location = models.CharField(max_length=25)
+    biography = models.TextField(max_length=150)
+
+    def __unicode__(self):
+        return '%s' % self.user.username
+
+    def get_biography(self):
+        return self.biography
+
+
+def get_profile(user):
+        if not hasattr(user, '_profile_cache'):
+            profile, created = UserProfile.objects.get_or_create(user=user)
+        return profile
+User.get_profile = get_profile

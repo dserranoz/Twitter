@@ -1,0 +1,74 @@
+<html>
+<head>
+<script type="text/javascript" src="{{ STATIC_URL }}jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+</script>
+<style type="text/css">
+#header{
+	width: 1349px;
+	height: 50px;
+	background-color: #252525;
+}
+.content{
+	width: 1349px;
+	height: 545px;
+	background-image: url({{ STATIC_URL }}fondo.jpg);
+}
+.tablee{
+	background-color: white;
+}
+.width_table{
+	width: 800px;
+	height: 50px;
+	text-align: right;
+}
+.width_tableProfile{
+	width: 302px;
+	height: 161px;
+	text-align: left;
+}
+.width_tableProfile1{
+	width: 522px;
+}
+.td1{
+	width: 302px;
+	height: 161px;
+}
+.td2{
+	width: 302px;
+	height: 250px;
+}
+.td3{
+	height: 46px;
+}
+.td4{
+	width: 502px;
+	height: 75px;
+}
+.logo{
+	background: url({{ STATIC_URL }}logoblanco.png) no-repeat;
+}
+.img1{
+	background: url({{ STATIC_URL }}nocturno.png) no-repeat;
+}
+.inciarsesion{
+	background-image: url({{ STATIC_URL }}iniciar.png) no-repeat;
+	width: 106px;
+	height: ;
+}
+</style>
+</head>
+<body>
+<div id="header" class="logo">
+<table border="1" class="width_table" align="center">
+<tr> <td> 
+{% if user.is_authenticated %}<p> <a href="/user/logout">Logout</a></p>{% else %}<p><a href="/user/login">Login</a> </p> 
+{% endif %}
+</td> </tr>
+</table>
+</div>
+  {% block content %}
+  {% endblock %}
+
+</body>
+</html>

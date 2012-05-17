@@ -45,12 +45,12 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = '/home/serrano/Projects/ProyectoFinal/twitter/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -108,7 +108,7 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
-AUTH_PROFILE_MODULE = 'users.Users'
+AUTH_PROFILE_MODULE = 'users.UserProfile'
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -152,3 +152,11 @@ LOGIN_URL = '/user/login/'
 
 
 LOGIN_REDIRECT_URL = '/user/login/'
+
+
+ACOUNT_ACTIVATION_DAYS = 7
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'dav.serranoz@gmail.com'
+EMAIL_HOST_PASSWORD = 'DVDGRIZZ'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587

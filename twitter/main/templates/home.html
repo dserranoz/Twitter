@@ -1,78 +1,105 @@
 <html>
 <head>
-	<title>Twitter</title>
-	<script type="text/javascript" src="{{ STATIC_URL }}jquery-1.7.1.min.js"></script>
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css" />
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}screen.css" />
 <script type="text/javascript">
 </script>
-<style type="text/css">
-#header{
-	width: 1349px;
-	height: 50px;
-	background-color: #252525;
-}
-.content{
-	width: 1349px;
-	height: 545px;
-	background-image: url({{ STATIC_URL }}fondo.jpg);
-}
-.tablee{
-	background-color: white;
-}
-.logo{
-	background: url({{ STATIC_URL }}logoblanco.png) no-repeat;
-}
-.img1{
-	background: url({{ STATIC_URL }}nocturno.png) no-repeat;
-}
-.inciarsesion{
-	background-image: url({{ STATIC_URL }}iniciar.png) no-repeat;
-	width: 106px;
-	height: ;
-}
-</style>
 </head>
 <body>
-<div id="header" class="logo"></div>
-<table border="0" align="center" width="800" class="content">
-	<tr> </tr> 
-	<tr> 
-		<td width="230" height="330"> </td> 
-		<td width="500" class="img1"> </td> 
-		<td width="302"> 
-			<table border="1">
-				<tr> 
-					<td aling="center"> 
-						{% block content %}
-							<form action="" method="post">
-								{% csrf_token %}
-								{% if form.errors %}<p>Please correct the following fields:</p>{% endif %}	
-									<div class="Register_div">
-										{% if form.username.errors %}<p class="error">{{ form.username.errors }}</p>{% endif %}
-										<p> <label for="username"{% if form.username.errors %} class="error" {% endif %}>Username:</label> </p>
-										<p> {{ form.username }} </p>
-									</div>
-									<div class="Register_div">
-										{% if form.password.errors %}<p class="error"> {{ form.password.errors }} </p> {% endif %}
-										<p> <label for="password"{% if form.password.errors %} class="error" {% endif %}>Password:</label> </p>
-										<p> {{ form.password }} </p>
-									</div>
-									<p> <input type="submit" alt="register"/> </p>
-									<p> Forgot your password? <a href="/resetpassword/">Reset it!</a> </p>
-							</form>
-						{% endblock %}
-					</td>
-				
-				</tr> 
-				<tr> 
-					<td width="302" height="207"> 
-						<a href="{% url User_Registration %}">Sing up for Twitter</a>
-					</td> 
-				</tr> 
-			</table>
-		</td> 
-		<td> </td> 
-	</tr> 
-	<tr> </tr> 
-</table>
+<!--Header Begin-->
+<div id="header">
+  <div class="center">
+    <div id="logo"><a href="#">Calliope</a></div>
+    <!--Menu Begin-->
+    <div id="menu">
+      <ul>
+        <li><a class="active" href="{% url home %}"><span>Home</span></a></li>
+        <li><a href="{% url User_Registration %}"><span>Register</span></a></li>
+        <li><a href="/resetpassword/"><span>Reset Password</span></a></li>
+      </ul>
+    </div>
+    <!--Menu END-->
+  </div>
+</div>
+<!--Header END-->
+<!--Toprow Begin-->
+<div id="toprow">
+  <div class="center">
+    <div id="cubershadow">
+      <table border="0" align="center">
+        <tr> 
+          <td aling="center"> 
+<!--
+              <div><p> Login </p></div>
+              <form action="" method="post" align="center">
+                {% csrf_token %}
+                {% if form.errors %}<p>Please correct the following fields:</p>{% endif %}  
+                  <div class="Register_div">
+                    {% if form.username.errors %}<p class="error">{{ form.username.errors }}</p>{% endif %}
+                    <p> <label for="username"{% if form.username.errors %} class="error" {% endif %}>Username:</label> </p>
+                    <p> {{ form.username }} </p>
+                  </div>
+                  <div class="Register_div">
+                    {% if form.password.errors %}<p class="error"> {{ form.password.errors }} </p> {% endif %}
+                    <p> <label for="password"{% if form.password.errors %} class="error" {% endif %}>Password:</label> </p>
+                    <p> {{ form.password }} </p>
+                  </div>
+                  <p> <input type="submit" alt="register"/> </p>
+              </form>
+ -->           
+          </td>
+      </table>
+{% block content %}
+  <form action="" method="post" align="center">
+    {% csrf_token %}
+    {% if form.errors %}<p>Please correct the following fields:</p>{% endif %}       
+    <div id="login-holder">
+      <div id="loginbox">
+      <div id="login-inner">
+        <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <th>Username</th>
+          <td><p> {{ form.username }} </p>
+          </td>
+
+        </tr>
+        <tr>
+          <th>Password</th>
+          <td><p> <p></p>{{ form.password }} </p></td>
+        </tr>
+          
+        <tr>
+          <th></th>
+          <td><p><p></p> <input type="submit" alt="register"/> </p></td>
+        </tr>
+        </table>
+      </div>
+      </div>
+    </div>
+  </form>
+{% endblock %}
+  </div>
+</div>
+<!--Toprow END-->
+<!--MiddleRow Begin-->
+<div id="midrow">
+  <div id="container">
+
+  </div>
+</div>
+<!--MiddleRow END-->
+<!--BottomRow Begin-->
+<div id="bottomrow">
+  <div class="textbox">
+    </div>
+  
+</div>
+<!--BottomRow END-->
+<!--Footer Begin-->
+<div id="footer">
+  <div class="foot"> <span>Created by David Serrano Resendiz</span> </div>
+</div>
+<!--Footer END-->
 </body>
 </html>
