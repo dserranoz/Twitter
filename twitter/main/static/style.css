@@ -133,3 +133,38 @@ a.button{background:url(buttonr.gif) no-repeat right; padding:3px 0px; margin-le
 	font-variant: small-caps;
 	text-align: right;
 }
+
+.text7{
+	font-family: verdana, sans-serif;
+	color: #030101;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.text8{
+	font-family: verdana, sans-serif;
+	color: #BD3939;
+	font-size: 13px;
+	font-style: italic;
+	font-variant: small-caps;
+	text-align: right;
+}
+
+.text9{
+	font-family: verdana, sans-serif;
+	color: #050505;
+	font-size: 16px;
+	font-weight: bold;
+	font-style: italic;
+	font-variant: small-caps;
+	text-align: center;
+}
+
+.text10{
+	font-family: 'lucida sans unicode', 'lucida grande', sans-serif;
+	color: #6368F2;
+	font-size: 14px;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-align: center;
+}

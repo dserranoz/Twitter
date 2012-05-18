@@ -4,7 +4,6 @@
 <title>UserProfile</title>
 <link rel="stylesheet" href="{{ STATIC_URL }}screen.css" type="text/css" media="screen" title="default" />
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}style.css" />
-<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 <!--Header Begin-->
@@ -34,7 +33,7 @@
   <div id="box2holder">
   <table border="0" class="width_tableProfile2" align="center">
     <tr> 
-      <td width="130" height="130"> <img src="{{ STATIC_URL }}{{ users.image }}"/> </td> 
+      <td width="130" height="130"> <img src="{{ users.image }}"/> </td> 
       <td width="405" height="129"> 
         <table border="0" width="405" height="129">
           <tr> 
@@ -51,7 +50,7 @@
           </tr>
         </table>
       </td>
-      <td> "" </td>
+      <td>  </td>
       <td width="130" height="130"> Edit Profile  
         <a href="{% url edit_profile %}">Here!</a>
       </td> 

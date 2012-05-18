@@ -11,7 +11,7 @@
     <!--Menu Begin-->
     <div id="menu">
       <ul>
-        <li><a href="#"><span>Home</span></a></li>
+        <li><a href="{% url home %}"><span>Home</span></a></li>
         <li> {% if user.is_authenticated %} <a href="/user/logout"><span>Logout</span></a> {% else %} <a href="/user/login"><span>Login</span></a> {% endif %}</li>
         <li><a href="{% url add_tweet %}"><span>Add Tweet</span></a></li>
       </ul>
@@ -33,16 +33,19 @@
   <tr> 
     <td valign="top"> 
       <table border="0" class="width_tableProfile" align="left">
-        <tr> <td class="td1"> <p>  {{user.first_name}} {{user.last_name}} </a> </p>  
+        <tr> <td class="td1"> <p class="text7">  {{user.first_name}} {{user.last_name}} </a> </p>  
         <a href="/user/profile"> User Profile </a>
-        <p> View my profile page </p>  
+        <p class="text8"> View my profile page </p>
+        <p>__________________</p>  
         </td> </tr>
-        <tr> <td class="td2"> <p> Seguidores </p>  
+        <tr> <td class="td2"> <p class="text9"> Seguidores </p>  
         {% for following in followings %}
-        <p> {{ following.user.username }}</p>
+        <p class="text10"> {{ following.user.username }}</p>
+        
          <ul>
             <li><a href="{% url dejar user.pk %}"><span>Dejar</span></a></li>
          </ul>
+
         {% endfor %}
         {%for notfoll in notfollowings %}
          <p> {{ notfoll.user.username }}</p>

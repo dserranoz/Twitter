@@ -11,6 +11,21 @@ from main.forms import RegistrationForm, LoginForm
 from main.models import UserProfile
 from django.contrib.auth.decorators import login_required
 from main.models import Tweet
+#imports for reset password
+from django.conf import settings
+from django.core.urlresolvers import reverse
+from django.http import QueryDict
+from django.utils.http import base36_to_int
+from django.utils.translation import ugettext as _
+from django.views.decorators.cache import never_cache
+from django.views.decorators.csrf import csrf_protect
+
+from django.contrib.auth import REDIRECT_FIELD_NAME, login as auth_login, logout as auth_logout
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import AuthenticationForm, PasswordResetForm, SetPasswordForm, PasswordChangeForm
+from django.contrib.auth.models import User
+from django.contrib.auth.tokens import default_token_generator
+from django.contrib.sites.models import get_current_site
 
 
 @login_required
@@ -137,13 +152,10 @@ def edit_profile(request):
 
 def add_tweet(request):
     form = TweetForm()
-    auth = TweetForm(instance=request.user)
     if request.method == 'POST':
         form = TweetForm(request.POST)
         if form.is_valid():
-            tweet = form.save(commit=False)
-            tweet.auth = auth
-            tweet.save()
+            form.save()
             return redirect('sesion')
     return render_to_response('add_tweet.html', {
         'form': form,
@@ -183,3 +195,102 @@ def dejar(request, pk):
     #user.save()
     return redirect('sesion')
 
+
+# my views for change password
+
+
+@csrf_protect
+def password_reset_(request, is_admin_site=False,
+                   template_name='password_reset_form.html',
+                   email_template_name='registration/password_reset_email.html',
+                   password_reset_form=PasswordResetForm,
+                   token_generator=default_token_generator,
+                   post_reset_redirect=None,
+                   from_email=None,
+                   current_app=None,
+                   extra_context=None):
+    if post_reset_redirect is None:
+        post_reset_redirect = reverse('password_reset_done_')
+    if request.method == "POST":
+        form = password_reset_form(request.POST)
+        if form.is_valid():
+            opts = {
+                'use_https': request.is_secure(),
+                'token_generator': token_generator,
+                'from_email': from_email,
+                'email_template_name': email_template_name,
+                'request': request,
+            }
+            if is_admin_site:
+                opts = dict(opts, domain_override=request.META['HTTP_HOST'])
+            form.save(**opts)
+            return HttpResponseRedirect(post_reset_redirect)
+    else:
+        form = password_reset_form()
+    context = {
+        'form': form,
+    }
+    context.update(extra_context or {})
+    return render_to_response(template_name, context,
+                              context_instance=RequestContext(request, current_app=current_app))
+
+
+def password_reset_done_(request,
+                        template_name='password_reset_done_.html',
+                        current_app=None, extra_context=None):
+    context = {}
+    context.update(extra_context or {})
+    return render_to_response(template_name, context,
+                              context_instance=RequestContext(request, current_app=current_app))
+
+
+@never_cache
+def password_reset_confirm_(request, uidb36=None, token=None,
+                           template_name='password_reset_confirm_.html',
+                           token_generator=default_token_generator,
+                           set_password_form=SetPasswordForm,
+                           post_reset_redirect=None,
+                           current_app=None, extra_context=None):
+    """
+    View that checks the hash in a password reset link and presents a
+    form for entering a new password.
+    """
+    assert uidb36 is not None and token is not None
+    if post_reset_redirect is None:
+        post_reset_redirect = reverse('django.contrib.auth.views.password_reset_complete')
+    try:
+        uid_int = base36_to_int(uidb36)
+        user = User.objects.get(id=uid_int)
+    except (ValueError, User.DoesNotExist):
+        user = None
+
+    if user is not None and token_generator.check_token(user, token):
+        validlink = True
+        if request.method == 'POST':
+            form = set_password_form(user, request.POST)
+            if form.is_valid():
+                form.save()
+                return HttpResponseRedirect(post_reset_redirect)
+        else:
+            form = set_password_form(None)
+    else:
+        validlink = False
+        form = None
+    context = {
+        'form': form,
+        'validlink': validlink,
+    }
+    context.update(extra_context or {})
+    return render_to_response(template_name, context,
+                              context_instance=RequestContext(request, current_app=current_app))
+
+
+def password_reset_complete_(request,
+                            template_name='registration/password_reset_complete.html',
+                            current_app=None, extra_context=None):
+    context = {
+        'login_url': settings.LOGIN_URL
+    }
+    context.update(extra_context or {})
+    return render_to_response(template_name, context,
+                              context_instance=RequestContext(request, current_app=current_app))

@@ -23,7 +23,7 @@ class UserProfileForm(forms.ModelForm):
 class TweetForm(forms.ModelForm):
     class Meta:
         model = Tweet
-        exclude = ("auth",)
+        #exclude = ("auth",)
 
 
 class UserCreateForm(UserCreationForm):
